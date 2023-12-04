@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity 0.8.21;
 
-import {Test, console2} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {Test} from "forge-std/Test.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+import {CounterForTestingVerification} from "../src/CounterForTestingVerification.sol";
+
+contract CounterForTestingVerificationTest is Test {
+    CounterForTestingVerification public counter;
 
     function setUp() public {
-        counter = new Counter();
+        counter = new CounterForTestingVerification();
         counter.setNumber(0);
     }
 
